@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-to-Text Converter</title>
+    <link rel="stylesheet" href="stt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-microphone"></i>
+                <h1>Speech to Text <span>Converter</span></h1>
+            </div>
+            <p>Convert your speech into written text instantly with multiple export options</p>
+        </div>
+
+        <div class="converter-card">
+            <div class="input-section">
+                <div class="section-header">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h3>Speech Input</h3>
+                </div>
+                
+                <div class="recording-visualization">
+                    <div class="visualizer">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="recording-status" id="recordingStatus">
+                        <i class="fas fa-circle"></i> Ready to listen
+                    </div>
+                </div>
+                
+                <div class="language-selection">
+                    <div class="setting-group">
+                        <label for="languageSelect"><i class="fas fa-globe"></i> Recognition Language</label>
+                        <select id="languageSelect">
+                            <option value="en-US">English (United States)</option>
+                            <option value="en-GB">English (United Kingdom)</option>
+                            <option value="es-ES">Spanish (Spain)</option>
+                            <option value="fr-FR">French (France)</option>
+                            <option value="de-DE">German (Germany)</option>
+                            <option value="it-IT">Italian (Italy)</option>
+                            <option value="pt-BR">Portuguese (Brazil)</option>
+                            <option value="ru-RU">Russian (Russia)</option>
+                            <option value="ja-JP">Japanese (Japan)</option>
+                            <option value="zh-CN">Chinese (China)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <div class="section-header">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Text Output</h3>
+                </div>
+                
+                <div class="output-container">
+                    <textarea id="textOutput" placeholder="Your transcribed text will appear here..." readonly></textarea>
+                    
+                    <div class="output-controls">
+                        <button id="copyText" class="btn-secondary">
+                            <i class="fas fa-copy"></i> Copy Text
+                        </button>
+                        <button id="clearOutput" class="btn-secondary">
+                            <i class="fas fa-eraser"></i> Clear Text
+                        </button>
+                        <button id="saveText" class="btn-tertiary">
+                            <i class="fas fa-save"></i> Save as File
+                        </button>
+                    </div>
+
+                    <div class="download-options">
+                        <label for="downloadFormat"><i class="fas fa-file-export"></i> Export Format:</label>
+                        <select id="downloadFormat" class="format-select">
+                            <option value="txt">Text File (.txt)</option>
+                            <option value="pdf">PDF Document</option>
+                            <option value="doc">Word Document</option>
+                            <option value="json">JSON Data</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button id="startBtn" class="btn-primary">
+                    <i class="fas fa-microphone"></i> Start Listening
+                </button>
+                <button id="pauseBtn" class="btn-secondary" disabled>
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+            </div>
+
+            <div class="status-section">
+                <div id="status" class="status ready">
+                    <i class="fas fa-info-circle"></i> Click "Start Listening" and begin speaking
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="text-to-speech.html" class="nav-btn">
+                <i class="fas fa-text-height"></i> Go to Text-to-Speech
+            </a>
+        </div>
+
+        <div class="features">
+            <h3>Advanced Speech Recognition Features</h3>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-language"></i>
+                    <h4>Multiple Languages</h4>
+                    <p>Support for 10+ languages and dialects with accurate transcription</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-brain"></i>
+                    <h4>AI-Powered</h4>
+                    <p>Advanced neural networks for real-time, accurate speech recognition</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Real-time Processing</h4>
+                    <p>Instant transcription as you speak with live visual feedback</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-download"></i>
+                    <h4>Multiple Export Options</h4>
+                    <p>Save transcripts as TXT, PDF, DOC, or JSON files</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="stt.js"></script>
+</body>
+</html>
