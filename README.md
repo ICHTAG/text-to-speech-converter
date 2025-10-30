@@ -47,7 +47,7 @@ This project leverages **JavaScript's `SpeechSynthesis` API**, HTML, and CSS to 
 ---
 ## 🌐 Live Demo
 
-Check out the live demo here: [Text-to-Speech Converter Demo](https://text-to-speech-converter-ichtag.netlify.app/)  
+Check out the live demo here: [Text-to-Speech Converter Demo](https://ichtag-text-speech.netlify.app/)  
 
 *Make sure you deploy your project using GitHub Pages or any hosting service.*
 
